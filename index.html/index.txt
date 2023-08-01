@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Company Referral Page</title>
+</head>
+<body>
+    <!-- Your Company Logo -->
+    <img src="your_company_logo.png" alt="Your Company Logo">
+
+    <h1>Welcome to Our Company</h1>
+
+    <!-- Referral Link -->
+    <p>Share this link with your friends:</p>
+    <input type="text" value="https://www.yourcompany.com/referral?id=YOUR_REFERRAL_CODE" readonly>
+    <br>
+
+    <!-- Referral Form -->
+    <h2>Refer a Friend</h2>
+    <form action="submit_referral.php" method="POST">
+        <label>Your Name:</label>
+        <input type="text" name="referrer_name" required>
+        <br>
+        <label>Your Email:</label>
+        <input type="email" name="referrer_email" required>
+        <br>
+        <label>Friend's Name:</label>
+        <input type="text" name="friend_name" required>
+        <br>
+        <label>Friend's Email:</label>
+        <input type="email" name="friend_email" required>
+        <br>
+        <input type="submit" value="Submit Referral">
+    </form>
+
+    <!-- JavaScript for capturing referral code -->
+    <script>
+        // Get the referral code from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const referralCode = urlParams.get('id');
+
+        // Set the referral code as the default value for the referral link input field
+        const referralLinkInput = document.querySelector('input[readonly]');
+        referralLinkInput.value = `https://www.yourcompany.com/referral?id=${referralCode}`;
+    </script>
+</body>
+</html>
