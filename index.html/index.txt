@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxmetallic Referral Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 450px; /* Adjust the width as needed */
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        .referral-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .referral-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .referral-form input[type="text"],
+        .referral-form input[type="email"],
+        .referral-form input[type="tel"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .referral-form input[type="submit"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            margin-left: 30px; /* Center the submit button horizontally */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .referral-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="lux.png" alt="Luxmetallic Logo">
+            <h1>Luxmetallic</h1>
+        </div>
+
+        <div class="referral-link">
+            <p>Share this link with your friends:</p>
+            <input type="text" value="https://luxmetallic.com/gallery" readonly>
+        </div>
+
+        <div class="referral-form">
+            <h2>Refer a Friend</h2>
+            <form action="submit_referral.php" method="POST">
+                <label>Your Name:</label>
+                <input type="text" name="referrer_name" required>
+                <label>Your Mobile:</label>
+                <input type="tel" name="referrer_mobile" required>
+                <label>Referred Name:</label>
+                <input type="text" name="referred_name" required>
+                <label>Referred Mobile:</label>
+                <input type="tel" name="referred_mobile" required>
+                <input type="submit" value="Submit Referral">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
