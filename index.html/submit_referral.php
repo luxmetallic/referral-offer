@@ -3,15 +3,15 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Get the form data
     $referrer_name = $_POST["referrer_name"];
-    $referrer_email = $_POST["referrer_email"];
-    $friend_name = $_POST["friend_name"];
-    $friend_email = $_POST["friend_email"];
+    $referrer_mobile = $_POST["referrer_mobile"];
+    $referred_name = $_POST["referred_name"];
+    $referred_mobile = $_POST["referred_mobile"];
 
     // Save the referral information to your database or send it to your email
     // For example, if you want to send it via email:
     $to = "luxstoke@gmail.com";
     $subject = "New Referral Submission";
-    $message = "Referrer Name: $referrer_name\nReferrer Email: $referrer_email\nFriend Name: $friend_name\nFriend Email: $friend_email";
+    $message = "Referrer Name: $referrer_name\nReferrer Mobile: $referrer_mobile\nReferred Name: $referred_name\nReferred Mobile: $referred_mobile";
     $headers = "From: luxstoke@gmail.com";
 
     if (mail($to, $subject, $message, $headers)) {
