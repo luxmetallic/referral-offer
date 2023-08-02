@@ -9,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Save the referral information to your database or send it to your email
     // For example, if you want to send it via email:
-    $to = "fayezalchohuff@gmail.com";
+    $to = "luxstoke@gmail.com";
     $subject = "New Referral Submission";
     $message = "Referrer Name: $referrer_name\nReferrer Email: $referrer_email\nFriend Name: $friend_name\nFriend Email: $friend_email";
-    $headers = "From: fayezalchohuff@gmail.com";
+    $headers = "From: luxstoke@gmail.com";
 
     if (mail($to, $subject, $message, $headers)) {
         // If the email is sent successfully, you can redirect the user to a thank you page or show a success message
